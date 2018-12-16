@@ -1,0 +1,462 @@
+﻿
+
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+        
+        body {
+          
+      
+            height: 100vh;
+            padding-left:2%;
+            max-width: 1800px;
+            min-width: 1160px;
+            font-size: 14px;
+            background-color: gainsboro;
+            font-family: Arial, sans-serif;
+
+        }
+
+        img {
+            max-height: 250px;
+            max-width: 500px;
+            }
+
+        .img_cat {
+            z-index: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-areas:
+                 "hd hd hd hd hd"
+                 "t1  f1 f2 f2 rev"
+                 "t2  f1 f2 f2 rev"
+                 "t3  f1 f2 f2 rev" 
+                "t4  f1 f2 f2 rev" 
+                "t5  f1 f2 f2 rev"
+            /*2*/
+            "t5  f3 f4 f5 rev"
+                 "t  f3 f4 f5 rev"
+                 "t  f3 f4 f5 rev" 
+                "t  f3 f4 f5 tt"
+                 "t  f3 f4 f5 tt"
+            /*3*/
+            "t  f6 f6 f7 tt"
+                 "t  f6 f6 f7 tt" 
+                "t  f6 f6 f7 tt"
+                 "t  f6 f6 f7 tt"
+                 "t  f6 f6 f7 tt"
+            /*4*/
+            "t  f8 f8 f8 tt" 
+                "t f8 f8 f8 tt" 
+                "t  f8 f8 f8 tt" 
+                "t  f8 f8 f8 tt" 
+                "t  f8 f8 f8 tt" 
+                "b     b  b  b   b " 
+                "ft1 ft1 . . ft2";
+        }
+
+
+
+        .head {
+            font-weight: bold;
+            grid-area: hd;
+            font-size: 3em;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .type1 {
+            grid-area: t1;
+        }
+
+        .type2 {
+            grid-area: t2;
+        }
+
+        .type3 {
+            grid-area: t3;
+        }
+
+        .type4 {
+            grid-area: t4;
+        }
+
+        .type5 {
+            grid-area: t5;
+        }
+
+        .foot {
+            grid-area: ft;
+        }
+
+        .reviews {
+            grid-area: rev;
+            /*margin-right: 10%;*/
+            background-color: silver;
+            width:90%;
+            height: auto;
+            padding-left: 5%;
+            display: flex;
+            align-content: space-between;
+            flex-direction: column;
+        }
+
+        .foto1 {
+            grid-area: f1;
+            background-color: white;
+            vertical-align: bottom;
+        }
+
+        .foto2 {
+            grid-area: f2;
+            background-color: white;
+            vertical-align: bottom;
+        }
+
+        .foto3 {
+            grid-area: f3;
+            background-color: white;
+            vertical-align: bottom;
+        }
+
+        .foto4 {
+            background-color: white;
+            grid-area: f4;
+        }
+
+        .foto5 {
+            background-color: white;
+            grid-area: f5;
+        }
+
+        .foto6 {
+            background-color: white;
+            grid-area: f6;
+        }
+
+        .foto7 {
+            background-color: white;
+            grid-area: f7;
+        }
+
+        .foto8 {
+            background-color: white;
+            grid-area: f8;
+        }
+
+        .companyName {
+            grid-area: ft1;
+            font-size: 1em;
+        }
+
+        .companyAddress {
+            grid-area: ft2;
+            right: 0;
+            font-size: 1em;
+            text-align: right;
+        }
+
+        .between {
+            grid-area: b;
+        }
+
+        .free_r {
+            grid-area: t7;
+            width: 90%;
+            background-color: gainsboro;
+        }
+
+        .free_l {
+            grid-area: t;
+            background-color: silver;
+            border-top: 1px solid grey;
+        }
+
+
+        .type {
+            height: 100%;
+            width:100%;
+            font-size: 1.7em;
+            padding-top: 7%;
+            background-color: silver;
+            border-bottom: 1px solid white;
+            padding-left: 5%;
+        }
+
+            .type:not(.type1) {
+                border-top: 1px solid grey;
+            }
+
+        .mid:not(.foto8) {
+            border-bottom: 15px solid gainsboro;
+        }
+
+        .mid{
+            text-align: center;
+            width: 100%;
+            position: relative;
+            border-left: 15px solid gainsboro;
+            overflow: hidden;
+            display:flex;
+            flex-direction:column-reverse;
+        }
+
+ 
+        .mid:hover::before {
+              transform: translateX(0);
+          }
+      
+        div[data-name_age]::before
+        {   position: absolute;
+             bottom: 20%;
+            background-color:  #696969;
+             color: white;
+            content:attr(data-name_age);
+             transform: translateX(-100%);
+            transition: 0.3s ease-in-out;
+            opacity: 0.7;
+            font-size: 1.7em;
+            width:auto;
+            height:auto;
+            text-align: left;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-bottom:10px;
+            padding-top:10px;
+            z-index:11;
+            
+
+        }
+   
+        input:not(#order) {
+            display: none;
+        }
+
+        .rating_label {
+            color: red;
+            font-size: 1.7em;
+            text-transform: uppercase;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            padding-left: 2%;
+        }
+
+       #order:not(:checked) ~ div.abc_a {
+            order: 1;
+        }
+       #order:not(:checked) ~ div.abc_b {
+            order: 2;
+        }
+       #order:not(:checked) ~ div.abc_c {
+            order: 3;
+        }
+       #order:not(:checked) ~ div.abc_d {
+            order: 4;
+        }
+       #order:not(:checked) ~ div.abc_e {
+            order: 5;
+        }
+       #order:not(:checked) ~ div.abc_f {
+            order: 6;
+        }
+       #order:not(:checked) ~ div.abc_g {
+            order: 7;
+        }
+       #order:not(:checked) ~ div.abc_h {
+            order: 8;
+        }
+       #order:not(:checked) ~ div.abc_i {
+            order: 9;
+        }
+       #order:not(:checked) ~ div.abc_j {
+            order: 10;
+        }
+       #order:not(:checked) ~ div.abc_k {
+            order: 11;
+        }
+       #order:not(:checked) ~ div.abc_l {
+            order: 12;
+        }
+       #order:not(:checked) ~ div.abc_m {
+            order: 13;
+        }
+       #order:not(:checked) ~ div.abc_n {
+            order: 14;
+        }
+       #order:not(:checked) ~ div.abc_o {
+            order: 15;
+        }
+       #order:not(:checked) ~ div.abc_p {
+            order: 16;
+        }
+       #order:not(:checked) ~ div.abc_q {
+            order: 17;
+        }
+       #order:not(:checked) ~ div.abc_r {
+            order: 18;
+        }
+       #order:not(:checked) ~ div.abc_s {
+            order: 19;
+        }
+       #order:not(:checked) ~ div.abc_t {
+            order: 20;
+        }
+       #order:not(:checked) ~ div.abc_u {
+            order: 21;
+        }
+       #order:not(:checked) ~ div.abc_v {
+            order: 22;
+        }
+       #order:not(:checked) ~ div.abc_w {
+            order: 23;
+        }
+       #order:not(:checked) ~ div.abc_x {
+            order: 24;
+        }
+       #order:not(:checked) ~ div.abc_y {
+            order: 25;
+        }
+       #order:not(:checked) ~ div.abc_z {
+            order: 26;
+        }
+
+        #order:checked ~ div.ten {
+            order: 1;
+        }
+        #order:checked ~ div.nine {
+            order: 2;
+        }
+        #order:checked ~ div.eight {
+            order: 3;
+        }
+        #order:checked ~ div.seven {
+            order: 4;
+        }
+        #order:checked ~ div.six {
+            order: 5;
+        }
+        #order:checked ~ div.five {
+            order: 6;
+        }
+        #order:checked ~ div.four {
+            order: 7;
+        }
+        #order:checked ~ div.three {
+            order: 8;
+        }
+        #order:checked ~ div.two {
+            order: 9;
+        }
+        #order:checked ~ div.one {
+            order: 10;
+        }
+        #order {
+            position: relative;
+            left: 86%;
+            top: -5%;
+            justify-content: flex-end;
+        }
+
+        .d_order {
+       
+            font-size: 1.4em;
+            padding-right:50px;
+            display:flex;
+            justify-content:flex-end;
+        }
+
+
+        .cat_label {
+            width: 100%;
+            display:inline-block;
+            cursor: pointer;
+        }
+
+        .cat_select {
+            width: 100%;
+            /*cursor: pointer;*/
+            background-color: silver;
+        }
+
+        #Bengal:checked + .cat_select,
+        #Bur:checked + .cat_select,
+        #EgyptianMau:checked + .cat_select,
+        #Siamese:checked + .cat_select,
+        #Siberian:checked + .cat_select {
+            color: white;
+            background-color: #808080;
+        }
+
+
+        span {
+            color: red;
+        }
+         input[type="checkbox"].type:checked ~ .mid {
+       opacity: 0.5;
+       }
+        #Bengal:checked ~ div.Bengal:not(.type),
+        #Bur:checked ~ div.Bur:not(.type),
+        #EgyptianMau:checked ~ div.EgyptianMau:not(.type),
+        #Siamese:checked ~ div.Siamese:not(.type),
+        #Siberian:checked ~ div.Siberian:not(.type) {
+            opacity: 1;
+        }
+     
+
+       
+
+        .rating {
+            font-size: 1.7em;
+            display: inline-block;
+        }
+
+        #green {
+            background: linear-gradient(to right, #00FF7F, #F0FFF0);
+        }
+
+        #blue {
+            background: linear-gradient(to right, #1E90FF, #F0F8FF);
+        }
+
+        #red {
+            background: linear-gradient(to right, red, #FFE4E1);
+        }
+
+        #yellow {
+            background: linear-gradient(to right, yellow, #FFFFE0);
+        }
+
+        .companyName,
+        .companyAddress {
+            font-size: 1em;
+        }
+
+        .companyAddress {
+            width:90%;
+            color: darkblue;
+            padding-right: 5%;
+            justify-content: flex-end;
+        }
+
+        .help_div {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .help {
+            width: 40px;
+            font-weight: bold;
+            padding-right: 5%;
+           
+            display:flex;
+            justify-content:flex-end;
+            padding-bottom: 3%;
+            padding-top: 3%;
+        }
+
+        
