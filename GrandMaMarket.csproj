@@ -66,7 +66,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cats2.html" />
     <Content Include="GrandMaCatMarket.html" />
     <Content Include="indexCat.css" />
     <Content Include="packages.config" />
@@ -78,13 +77,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CatMarketGrid.html" />
-    <Content Include="GrandMaMarket.html" />
-    <Content Include="HtmlPage1.html" />
-    <Content Include="index.css" />
-    <Content Include="see.css" />
-    <Content Include="StyleSheet1.css" />
-    <Content Include="StyleSheet2.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
