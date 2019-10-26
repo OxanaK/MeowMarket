@@ -1,11 +1,14 @@
 ## “GrandMa Cat Market” 
--creating a SPA by using grid, ordering, animation, view point, and pseudo-classes.
-## HTML/CSS
 
+creating a SPA by using using grid, ordering, animation, view point, and pseudo-classeS
 
-OxanaK.github.io/GrandMaCatMarket/GrandMaCatMarket.html
+Try it! ----> https://oxanak.github.io/GrandMaCatMarket/GrandMaCatMarket.html
 
+## Technology:
+HTML, CSS
 
 ## Images: 
+
+![alt text](https://github.com/OxanaK/grandMaCatsMarket/blob/master/catsMarket.jpg)
 
 ![alt text](https://github.com/OxanaK/grandMaCatsMarket/blob/master/catsMarket.jpg)
