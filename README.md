@@ -1,4 +1,4 @@
-## “GrandMa Cat Market” 
+## “Meow Market” 
 
 creating a SPA by using grid, ordering, animation, view point, and pseudo-classeS
 
